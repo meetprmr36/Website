@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tailwind practice</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: max-content;
+            overflow-x: hidden;
+        }
+
+        .pictureleft {
+            position: absolute;
+            height: 150vh;
+            background-image: url(https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/banner-img.gif);
+            background-position: left bottom;
+            rotate: 45deg;
+            background-size: cover;
+            width: 100vw;
+            left: -60%;
+            bottom: -50%;
+            z-index: -1;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .pictureright {
+            position: absolute;
+            height: 150vh;
+            background-image: url(https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/banner-img-1.gif);
+            background-position: right bottom;
+            rotate: -45deg;
+            background-size: cover;
+            z-index: -1;
+            width: 100vw;
+            right: -57%;
+            bottom: -58%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .cards:hover {
+            box-shadow: 2px 2px 15px 15px rgba(150, 150, 150, 0.2);
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .oval:hover {
+            border-color: rgb(167, 139, 250);
+        }
+
+        .clock {
+            transition: all 0.3s ease;
+        }
+
+        .clock:hover {
+            border: 1px solid black;
+        }
+
+        .akshar:hover {
+            color: gray;
+        }
+
+        .para:hover {
+            color: rgba(209, 213, 219, 1);
+        }
+
+        .lilly {
+            list-style: circle;
+        }
+
+        .leftja {
+            animation: left 60s linear 0s infinite;
+        }
+
+        .que:hover {
+            border: 2px solid rgb(100, 116, 139);
+        }
+    </style>
+</head>
+
+<body class="main">
+    <div class="bg-black h-15 w-full">
+        <a href="#"
+            class="bg-green-600 w-25 font-medium h-10 float-right rounded-lg grid place-content-center m-2.5 text-white">
+            buy
+            now!</a>
+        <div class="float-left h-full w-52 flex">
+            <h2 class="font-black text-white text-xl m-4 mr-1">envanto</h2>
+            <h2 class="font-light text-white text-xl m-4 ml-0">market</h2>
+        </div>
+    </div>
+    <div class="sticky-top bg-slate-800">
+        <div class=" sticky-top flex">
+            <div class="container-fluid w-full flex">
+                <div class=" flex float-left text-5xl text-white pl-7 pt-1.5 font-bold max-md:text-3xl max-sm:lg ">
+                    AXELIT</div>
+                <div class="inline m-auto max-lg:block">
+                    <a href="#"
+                        class="m-6 xl:m-5 lg:m-3 md:m-0  font-semibold h-full text-xl items-center lg:text-xl md:text-lg sm:text-xs max-sm:text-xs max-lg:block  text-purple-600 active">DEMO</a>
+                    <a href="#"
+                        class="m-6 xl:m-5 lg:m-3 md:m-0 text-white font-semibold h-full text-xl items-center lg:text-xl md:text-lg sm:text-xs max-sm:text-xs ">CARDS</a>
+                    <a href="#"
+                        class="m-6 xl:m-5 lg:m-3 md:m-0 text-white font-semibold h-full text-xl items-center lg:text-xl md:text-lg sm:text-xs max-sm:text-xs  max-lg:block">FEATURES</a>
+                    <a href="#"
+                        class="m-6 xl:m-5 lg:m-3 md:m-0 text-white font-semibold h-full text-xl items-center lg:text-xl md:text-lg sm:text-xs max-sm:text-xs  max-lg:block">ELEMENTS</a>
+                    <a href="#"
+                        class="m-6 xl:m-5 lg:m-3 md:m-0 text-white font-semibold h-full text-xl items-center lg:text-xl md:text-lg sm:text-xs max-sm:text-xs max-lg:block ">SUPPORT</a>
+                </div>
+                <div class="inline-flex max-sm:flex-col">
+                    <a href="#"
+                        class="bg-pink-400 text-white rounded-4xl max-h-10 w-32 lg:text-lg md:text-sm sm:text-xs max-sm:text-xs font-semibold text-lg grid place-content-center m-3 mr-2 float-right max-sm:h-10 max-lg:w-20">
+                        Hire us
+                    </a>
+
+                    <a href="#"
+                        class="bg-purple-400 text-white rounded-4xl h-10 w-32 lg:text-lg md:text-sm sm:text-xs max-sm:text-xs font-semibold text-lg grid place-content-center  m-3 ml-2 float-right max-lg:w-20">
+                        Buy now!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="container-fluid h-screen max-lg:h-96">
+            <div class="w-full flex pt-24 items-center justify-center max-sm:pt-2">
+                <div
+                    class="text-7xl w-xl bg-gradient-to-r from-pink-400 via-indigo-500 to-violet-500 bg-clip-text font-extrabold text-transparent  text-center max-lg:text-4xl max-lg:flex">
+                    Power up your goal with
+                    AXELIT</div>
+            </div>
+            <div class="w-full flex items-center justify-center pt-8 max-sm:pt-4">
+                <p
+                    class="w-xl text-center bg-gradient-to-r from-violet-400 via-pink-500 to-yellow-300 bg-clip-text font-extrabold text-transparent text-3xl max-lg:text-2xl max-sm:text-lg max-md:w-88">
+                    Axelit Comes with so many
+                    sidebar
+                    option
+                    ,
+                    layouts like RTl & many more ...!
+                <p>
+            </div>
+            <div class="flex justify-center">
+                <a href="#"
+                    class=" bg-purple-400 rounded-4xl h-15 w-40 text-xl font-semibold text-white grid place-content-center mt-15 mr-0">Check
+                    Now</a>
+                <a href="#"
+                    class=" bg-pink-400 rounded-4xl h-15 w-40 text-xl font-semibold text-white grid place-content-center mt-15 ml-2">Document
+                </a>
+            </div>
+            <div class="truncate">
+                <div class="pictureleft max-lg:hidden"></div>
+                <div class="pictureright max-lg:hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex place-content-center bg-white">
+        <div
+            class=" w-18 h-18 m-5.5 -mt-8.5 border-2 max-lg:mt-0 max-lg:m-3 border-dashed border-purple-500 rounded-2xl">
+            <a href="#"
+                class="bg-purple-400 text-4xl w-15 h-15 inline-block text-center place-content-center m-1 text-white rounded-2xl">B</a>
+        </div>
+        <div
+            class="relative w-18 h-18 m-5.5 -mt-8.5 border-2 max-lg:mt-0 max-lg:m-3 border-dashed border-pink-600 rounded-2xl">
+            <a href="#"
+                class="bg-pink-400 text-4xl w-15 h-15 inline-block text-center place-content-center m-1 text-white rounded-2xl">F</a>
+        </div>
+    </div>
+    <div class=" text-center bg-white h-max-content">
+        <h1 class="text-purple-500 text-5xl max-md:text-xl pt-8 mb-9 font-bold">150+ <span
+                class="text-black text-5xl max-md:text-xl">pages</span>
+        </h1>
+        <p class="text-gray-500 text-2xl max-md:text-lg">All pages created with unlimited features that will reduce the
+            cost, efforts
+            and your time.</p>
+    </div>
+    <div class="bg-white h-max-content pt-5 max-lg:flex max-lg:justify-center">
+        <div class="flex justify-center bg-white max-md:grid  max-lg:inline">
+            <a href="#"
+                class="oval w-45 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-purple-400 grid place-content-center rounded-4xl bg-purple-100 border-2 border-purple-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">🏠︎Dashboard</a>
+            <a href="#"
+                class="oval w-35 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">🗐Apps</a>
+            <a href="#"
+                class="oval w-37 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">✙UI
+                kits</a>
+            <a href="#"
+                class="oval w-47 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">🗒Advance
+                ui</a>
+            <a href="#"
+                class="oval w-43 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">✧Icons</a>
+        </div>
+        <div class="flex justify-center bg-white max-md:grid max-lg:inline">
+            <a href="#"
+                class="oval w-40 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">⊞Table</a>
+            <a href="#"
+                class="oval w-35 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">📄Forms</a>
+            <a href="#"
+                class="oval w-55 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">✓Ready
+                to use</a>
+            <a href="#"
+                class="oval w-55 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">📃Auth
+                Pages</a>
+            <a href="#"
+                class="oval w-55 h-15 text-2xl m-3.5 max-md:text-xs max-md:m-0 p-0 justify-center text-gray-500 grid place-content-center rounded-4xl bg-white border-2 border-gray-300 max-lg:w-35 max-lg:text-base max-lg:m-10 max-sm:m-2">⚠︎Error
+                Pages</a>
+        </div>
+    </div>
+
+    <!-- cards -->
+    <div class="flex justify-center max-lg:flex-col max-lg:justify-center max-lg:m-25 max-md:m-15">
+        <div
+            class="cards rounded-2xl m-5 border-1 border-solid bg-white max-lg:justify-center max-lg:mr-auto max-lg:ml-auto max-sm:items-center">
+            <img class="object-contain rounded-2xl h-auto w-90"
+                src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/project-dashboard.jpg"
+                alt="img">
+            <div class="flex justify-between">
+                <p class=" text-3xl p-5 w-min">Projects</p><a href="#"
+                    class="clock text-3xl p-5 bg-green-200 rounded-full flex items-center justify-center w-10 h-10 mt-5 mr-5">»</a>
+            </div>
+        </div>
+        <div
+            class="cards rounded-2xl m-5 border-1 border-solid  bg-white max-lg:justify-center max-lg:mr-auto max-lg:ml-auto">
+            <img class="object-contain rounded-2xl  h-auto w-90"
+                src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/ecommerce-dashboard.jpg"
+                alt="img">
+            <div class="flex justify-between">
+                <p class="flex text-3xl p-5 max-lg:text-2xl max-lg:pr-2 w-min ">Ecommerce</p><a href="#"
+                    class="clock text-3xl p-5 bg-purple-200 rounded-full flex items-center justify-center w-10 h-10 mt-5 mr-5">»</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- inline cards in md -->
+    <div class="col bg-gray-100  mt-10">
+
+        <div class="grid place-content-center text-center pt-5">
+            <p class="font-light text-5xl p-3 max-lg:text-3xl">Core<span
+                    class="font-semibold text-purple-500 text-5xl p-3 max-lg:text-3xl">features</span></p>
+            <p class="text-gray-500 text-xl w-3xl p-4 pb-10 max-lg:text-lg max-lg:w-80">Admin features, developers can
+                easily customize the
+                appearance and behavior of their applications, ensuring a consistent and visually appealing experience
+                across different devices and screen sizes.</p>
+        </div>
+
+        <div class="">
+
+            <div class="flex flex-row justify-center max-lg:grid">
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    Bootstrap
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-blue-200">Framework </div>
+                </div>
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    W3C
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-green-200">validation</div>
+                </div>
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    SASS
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-pink-200">Grades</div>
+                </div>
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    Apex Chart
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-gray-400">charts</div>
+                </div>
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    Web packs
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-purple-200">bundler </div>
+                </div>
+                <div
+                    class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                    Google maps
+                    <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-yellow-100">maps</div>
+                </div>
+            </div>
+
+
+            <!-- second one is starting -->
+            <div class="">
+                <div class="flex flex-row justify-center max-lg:grid">
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        charset
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-yellow-100">charts</div>
+                    </div>
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        Google fonts
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-gray-400">Fonts</div>
+                    </div>
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        UI kits
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-purple-200">Component</div>
+                    </div>
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        Apps
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-green-200">apps</div>
+                    </div>
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        NPM
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-pink-200">Pkg Manager</div>
+                    </div>
+                    <div
+                        class="cards h-40 w-50 grid place-content-center text-center bg-white font-semibold m-4 rounded-3xl text-2xl">
+                        Fullcalendar
+                        <div class="containe rounded-xl w-32 mt-3 md-1.5 font-light bg-blue-200">Event calendar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- queries -->
+        <div class="grid bg-[rgba(32,35,53,1)] h-auto">
+            <div class="grid grid-cols-6 gap-4 pt-10 max-lg:flex max-lg:flex-col max-lg:items-center">
+                <div class="col-span-4 col-start-2 max-lg:w-full max-lg:justify-center">
+                    <div
+                        class="text-center justify-center w-2xl ml-auto mr-auto max-lg:w-[545px] max-sm:w-screen max-sm:ml-0">
+                        <h2 class="font-semibold text-4xl text-white max-sm:text-3xl">Inquired <span
+                                class="font-extrabold text-purple-500 text-4xl max-sm:text-3xl">Queries</span></h2>
+                        <p class="akshar text-xl mt-5 text-slate-300  max-sm:text-base ">After reading the instructions,
+                            I had a few
+                            inquired queries
+                            about the process and decided to reach out to customer support for clarification.</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-3 gap-3 mr-28 ml-28 justify-center max-lg:flex max-lg:flex-col max-lg:items-center max-lg:mr-5 max-lg:ml-5">
+                <div class="row ">
+                    <div class="col-start-1 mt-8 que border-1 border-solid border-slate-500 rounded-2xl max-lg:w-full">
+                        <div class="text-7xl text-center text-white m-5 ml-13 max-lg:ml-5 max-lg:text-4xl">🕮</div>
+                        <h2 class="text-center text-2xl m-7 max-lg:m-3 text-slate-300">Digitize Your Documents</h2>
+                        <p class="text-center m-5 mb-8 max-lg:m-3 text-lg text-slate-400">Efficiently Arranged and
+                            Current</p>
+                        <a href="#"
+                            class="grid ml-auto mr-auto text-center w-44 mb-10 text-lg rounded-2xl bg-purple-500 text-slate-300">Check
+                            Document
+                        </a>
+                    </div>
+                    <div
+                        class="col-start-1 mt-8 mb-8 que border-1 border-solid border-slate-500 rounded-2xl max-lg:w-full">
+                        <div class="text-7xl text-center m-5 ml-13 max-lg:ml-5 max-lg:text-4xl">🎧</div>
+                        <h2 class="text-center text-2xl m-7 max-lg:m-3 text-slate-300">Committed Assistance</h2>
+                        <p class="text-center m-5 mb-8 max-lg:m-3 text-lg text-slate-400">Require assistance? Send us a
+                            ticket.
+                            We're here to help!</p>
+                        <a href="#"
+                            class="grid ml-auto mr-auto text-center w-44 mb-10 text-lg rounded-2xl bg-purple-500 text-slate-300">Get
+                            support
+                        </a>
+                    </div>
+                </div>
+                <div class="col-start-2 col-span-2 mt-8">
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">What is the role of an admin?? <a
+                                href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a></div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">How do i add or remove user? <a
+                                href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a></div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">What security mesureses should i
+                            implement? <a href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a>
+                        </div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">How can i troubleshoot common issues?
+                            <a href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a>
+                        </div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">How can i stay informed about updates
+                            and patches? <a href="#" class="text-slate-300 max-lg:text-lg text-2xl float-right">+</a>
+                        </div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">What is the process for system
+                            updates? <a href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a></div>
+                    </div>
+                    <div class="que line border-1 border-slate-500 rounded-xl mb-5.5">
+                        <div class="text-slate-300 m-5 text-lg max-lg:text-base ">How do i handle user access
+                            permissions? <a href="#" class="text-slate-300 text-2xl max-lg:text-lg float-right">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- sliding photos -->
+        <div class="grid">
+            <div class="grid grid-cols-2 max-lg:flex max-lg:flex-col max-lg:items-center">
+                <div class="col-start-1 max-lg:w-full max-lg:justify-center">
+                    <div class="grid grid-cols-7 max-lg:grid-cols-9 max-lg:inline-flex max-lg:mr-auto max-lg:w-screen">
+                        <div class="col-start-3 col-end-7 max-lg:col-start-2 max-lg:mr-5 max-lg:ml-5">
+                            <h2 class=" font-semibold text-4xl pt-10">Sophisticated<span
+                                    class="ml-2.5 font-extrabold text-4xl text-purple-500">Cards</span>
+                            </h2>
+                            <p class="pt-8 text-lg">Cards offer enhanced design flexibility and interactive
+                                capabilities,
+                                incorporating dynamic elements like animations, real-time
+                            </p>
+                            <ul class="mt-5" style="list-style: inside;">
+                                <li class="p-1 text-lg">200+ Cards Collection</li>
+                                <li class="p-1 text-lg">200+ Cards Collection</li>
+                                <li class="p-1 text-lg">200+ Cards Collection</li>
+                                <li class="p-1 text-lg">200+ Cards Collection</li>
+                                <li class="p-1 text-lg">200+ Cards Collection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-start-2 max-lg:mt-10 ">
+                    <div class="grid grid-cols-2 max-lg:h-[452px] max-lg:w-">
+                        <div class="w-full h-96 overflow-hidden max-lg:h-auto">
+                            <marquee behavior="scroll" direction="up" scrollamount="10" class="h-full">
+                                <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/landing-bg-1.png"
+                                    class="h-full object-cover">
+                                <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/landing-bg-1.png"
+                                    class="h-full object-cover">
+                            </marquee>
+                        </div>
+
+                        <div class="w-full h-96 overflow-hidden max-lg:h-auto">
+                            <marquee behavior="scroll" direction="down" scrollamount="10" class="h-full">
+                                <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/landing-bg-2.png"
+                                    class="h-full object-cover">
+                                <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/landing-bg-1.png"
+                                    class="h-full object-cover">
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- cards -->
+        <div class="grid bg-gray-100 justify-center max-lg:w-screen">
+            <div class="grid mt-10 max-lg:w-fit">
+                <div class="text-center max-lg:m-1 max-lg:w-screen">
+                    <h1 class="text-purple-500 text-4xl font-extrabold">Elements <span class="text-4xl text-black">Of
+                            axelit</span></h1>
+                    <div class="grid justify-center max-sm:w-full max-sm:m-auto">
+                        <p class="w-2xl mt-5 text-xl max-sm:w-fit">offer a responsive and user-friendly interface,
+                            streamlining the
+                            design and
+                            development of web applications by providing a robust set of pre-built components and
+                            templates.</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="grid grid-cols-8 gap-10 pt-10 max-lg:inline max-lg:w-96 max-lg:pt-0 max-sm:pl-4 max-lg:ml-5 max-sm:mb-0">
+                <div
+                    class="col-start-2 col-end-4 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-lg:w-fit ">
+                    <h1 class=" p-5 pl-9">Button</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Apply Custom button styles to forms, dialogs, and various
+                        elements, featuring support for</p>
+                    <a href="#" class="float-right mr-10 pb-5 text-purple-400">Viewbutton »</a>
+                </div>
+                <div
+                    class="col-start-4 col-end-6 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-lg:w-fit ">
+                    <h1 class=" p-5 pl-9">Cards</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Create stylish cards with Admin Element for organized content
+                        presentation and a sleek user</p>
+                    <a href="#" class="float-right mr-10 pb-5 text-purple-400">Viewcards »</a>
+                </div>
+                <div
+                    class="col-start-6 col-end-8 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-lg:w-fit ">
+                    <h1 class=" p-5 pl-9">List</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Easily design lists with Admin Element intuitive elements for
+                        structured content display</p>
+                    <a href="#" class="float-right mr-10 pb-5 text-purple-400">Viewlist »</a>
+                </div>
+            </div>
+
+
+            <!-- second starts -->
+            <div
+                class="grid grid-cols-8 gap-10 pt-10 mb-32 max-md:mb-20 max-lg:inline max-lg:w-96 max-lg:ml-5 max-lg:pt-0  max-sm:pl-4 max-sm:pr-4 max-sm:mt-0">
+                <div
+                    class="col-start-2 col-end-4 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-sm:h-60">
+                    <h1 class=" p-5 pl-9">Alerts</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Create alerts using Admin Elements intuitive elements to
+                        effectively communicate messages.</p>
+                    <a href="#" class="float-right mr-10 pb-5 text-purple-400">Viewalerts »</a>
+                </div>
+                <div
+                    class="col-start-4 col-end-6 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-sm:h-60">
+                    <h1 class=" p-5 pl-9">Accordions</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Create collapsible accordion in Admin for organized content
+                        presentation, optimizing user</p>
+                    <a href="#" class="float-right mr-10 pt-8 text-purple-400">Viewcaccordions »</a>
+                </div>
+                <div
+                    class="col-start-6 col-end-8 border-1 text-xl border-black rounded-4xl max-lg:h-55 max-lg:mt-10 max-sm:h-60">
+                    <h1 class=" p-5 pl-9">Dropdown</h1>
+                    <p class="text-left p-5 pl-9 pt-0">Create dropdown using Admin Elements for enhanced user
+                        interaction and intuitive navigation.</p>
+                    <a href="#" class="float-right mr-10 pb-5 text-purple-400">Viewdropdown »</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- sliding right -->
+        <div class="bg-[rgba(32,35,53,1)]">
+            <div class="text-center flex-col">
+                <div class="pt-20 justify-center">
+                    <div class="max-w-2xl ml-auto mr-auto">
+                        <h1 class="text-white text-4xl font-medium">
+                            Discover Our
+                            <span class="text-purple-500 text-4xl font-bold">Dark Layouts</span>
+                        </h1>
+                        <p class="para pt-10 max-lg:w-72 max-lg:m-auto text-gray-500">Embrace the elegance of the dark
+                            layout, where simplicity
+                            meets
+                            sophistication.
+                            Navigate effortlessly through your admin tasks with style.</p>
+                    </div>
+                </div>
+                <div class="pt-5 pb-5">
+                    <div class="">
+                        <marquee behavior="scroll" direction="left" scrollamount="8" class="w-full">
+                            <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/dark-layout.png"
+                                class="max-w-none">
+                        </marquee>
+                    </div>
+                    <div class="">
+                        <marquee behavior="scroll" direction="right" scrollamount="5" class="w-full">
+                            <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/dark-layout.png"
+                                class="max-w-none">
+                        </marquee>
+                    </div>
+                </div>
+                <div class="flex mr-auto ml-auto">
+                    <div class="justify-center mr-auto ml-auto mb-20">
+                        <div class="  bg-purple-500 rounded-4xl">
+                            <a href="#" class="grid place-content-center w-58 h-15 text-white text-2xl ">Check Document
+                                »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 2/3 top -->
+        <div class="ml-50 mr-50 max-lg:ml-5 max-lg:mr-5">
+            <div class="mt-20 max-md:mt-10">
+                <div class="flex-col text-center w-xl mr-auto ml-auto max-lg:w-full ">
+                    <h1 class=" text-purple-500 text-3xl font-extrabold">Customization <span
+                            class="text-black text-3xl font-semibold">and preview</span></h1>
+                    <div class="pt-5">
+                        <p class="text-gray-600 text-xl max-md:text-lg"> Allow users to personalize settings or design
+                            elements in
+                            real-time, providing an
+                            instant preview of the changes before finalizing, ensuring a seamless and tailored
+                            experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20 max-md:mt-10">
+                <div class="grid-cols-5 grid gap-5 ">
+                    <div class="col-start-1 col-end-4 rounded-4xl bg-purple-300">
+                        <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/layout.png"
+                            class="rounded-b-4xl rounded-t-4xl">
+                        <!-- <div class="rotate-45">Customize your
+                            sidebar with ease
+                            </div> -->
+                    </div>
+
+                    <div class="col-start-4 col-end-6 bg-[rgba(215,220,65,1)] rounded-4xl max-lg:rounded-2xl">
+                        <div class="h-25 m-5 mt-5 max-lg:m-2 max-lg:h-10 font-semibold text-white">
+                            <marquee behavior="scroll" direction="left" scrollamount="8" class="w-full">
+                                <h1 class="text-7xl max-lg:text-2xl text-green-800">Preview variant colors for perfect
+                                    customization!</h1>
+                            </marquee>
+                        </div>
+                        <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/color-hint.gif"
+                            class="pl-5 max-lg:pl-3 max-lg:rounded-b-2xl">
+                    </div>
+                </div>
+                <div class="grid-cols-5 grid gap-5 mt-6">
+                    <div class="col-start-1 col-end-3 bg-[#77b793] rounded-4xl">
+                        <div class="h-25 m-5 max-lg:m-0.5 place-content-center text-center">
+                            <h1 class="text-green-700 text-5xl max-lg:text-2xl">Quick <span
+                                    class="text-black text-5xl max-lg:text-2xl">Response</span>
+                            </h1>
+                        </div>
+                        <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/speed-performance.png"
+                            class="">
+                    </div>
+                    <div class="col-start-3 col-end-6 rounded-4xl bg-purple-950">
+                        <div class=" inline w-66">
+                            <h1 class="text-4xl max-lg:text-xl max-lg:ml-8 text-white">one-click and change your</h1>
+                            <span class="text-4xl max-lg:text-xl max-lg:ml-8 text-purple-500">Layout</span>
+                        </div>
+                        <div class=" float-right ">
+                            <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/layout-option.png"
+                                class="h-auto w-[469px]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mt-20 mb-20 max-md:mt-15 max-md:mb-15">
+            <div class="container bg-blue-200">
+                <marquee behavior="scroll" direction="left" scrollamount="12" class="w-full">
+                    <ul class="flex gap-8 text-4xl">
+                        <li class="text-blue-950"> Fully Customizable</li>
+                        <li class="text-blue-400">Google Font</li>
+                        <li class="text-blue-950">10+ Apps</li>
+                        <li class="text-blue-400">Fully Customizable</li>
+                        <li class="text-blue-950">100+ Custom Elements</li>
+                        <li class="text-blue-400">Mobile Responsive design</li>
+                        <li class="text-blue-950">150+ Pages</li>
+                        <li class="text-blue-400">Creative Card Design</li>
+                        <li class="text-blue-950">4+ Icons Set</li>
+                        <li class="text-blue-400">Quick Response</li>
+                        <li class="text-blue-950">Multiple Sidebar Options</li>
+                        <li class="text-blue-400"> Fully Customizable</li>
+                        <li class="text-purple-400">Google Font</li>
+                        <li class="text-blue-950">10+ Apps</li>
+                        <li class="text-blue-400">Fully Customizable</li>
+                        <li class="text-blue-950">100+ Custom Elements</li>
+                        <li class="text-blue-400">Mobile Responsive design</li>
+                        <li class="text-blue-950">150+ Pages</li>
+                        <li class="text-blue-400">Creative Card Design</li>
+                        <li class="text-blue-950">4+ Icons Set</li>
+                        <li class="text-blue-400">Quick Response</li>
+                        <li class="text-blue-950">Multiple Sidebar Options</li>
+                        </ul>
+                </marquee>
+            </div>
+        </div>
+
+        <!-- purcase plan -->
+        <div class="">
+            <div class=" flex justify-center">
+                <div class=" w-xl text-center max-lg:w-fit max-lg:m-3">
+                    <h1 class="text-4xl font-semibold">Purchase <span class="text-4xl text-purple-500 font-extrabold">
+                            Plans</span></h1>
+                    <p class="text-center text-xl mt-3 mb-5 text-gray-400">Include information on how users can navigate
+                        your platform,
+                        select a plan, and complete
+                        the transaction.</p>
+                </div>
+            </div>
+            <div class="mb-20 max-md:mb-10">
+                <div class="ml-45 mr-45 max-lg:ml-5 max-lg:mr-5">
+                    <div class="grid-cols-5 grid gap-5 h-92 max-lg:inline">
+                        <div class="col-start-1 col-end-4 border-2 border-green-800 rounded-4xl max-lg:mb-10">
+                            <div class="flex-col text-2xl max-lg:inline-flex">
+                                <h1 class="text-center float-right text-green-700 w-full">Basic Plan</h1>
+                                <div class="float-left w-[50%]">
+                                    <img src="https://phpstack-1384472-5121645.cloudwaysapps.com/template/html/axelit/assets/images/landing/wallet.png"
+                                        class="h-25 m-5">
+                                    <a href="#"
+                                        class="flex m-5 w-28 text-base justify-center rounded-lg bg-green-500">Basic
+                                        Plan</a>
+                                    <h1 class="text-3xl m-5 ">$14.00</h1>
+                                    <p class="text-xl ml-5 max-lg:w-72 ">Essential features at the best value. Get
+                                        started today
+                                        with our
+                                        budget-friendly pricing!</p>
+                                </div>
+                                <div class="flex-col">
+                                    <ul class=" text-green-600 float-left mt-10 max-lg:mt-5">
+                                        <ul class="lilly p-4 max-md:text-xl">6 Month support</ul>
+                                        <ul class="lilly p-4 max-md:text-xl">Single end product use</ul>
+                                        <ul class="lilly p-4 max-md:text-xl">Future upgrades included</ul>
+                                        <ul class="lilly p-4 max-md:text-xl">Free for use in end products</ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-start-4 col-end-6 h-92 max-lg:flex-col">
+                            <div class=" border-3 border-purple-500 rounded-4xl h-90 ">
+                                <div class="flex-col text-2xl ml-8 max-lg:ml-3">
+                                    <a href="#" class="text-start text-purple-900 ml-3">Business Plans</a>
+                                    <h1 class="text-3xl m-3 text-purple-400 font-semibold">$499.00</h1>
+                                    <ul class=" text-purple-800 text-start justify-center ">
+                                        <ul class="lilly p-3 max-md:text-xl">6 Month support</ul>
+                                        <ul class="lilly p-3 max-md:text-xl">Single end product use</ul>
+                                        <ul class="lilly p-3 max-md:text-xl">Future upgrades included</ul>
+                                        <ul class="lilly p-3 max-md:text-xl">Free for use in end products</ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- last part -->
+            <div class="bg-[rgba(32,35,53,1)] pt-28">
+                <div class=" flex-row ml-50 mr-50 max-lg:ml-5 max-lg:mr-5">
+                    <div class=" text-center align-middle">
+                        <h1 class="text-white text-5xl font-semibold">Build a <span
+                                class="text-purple-600 text-5xl font-semibold">Startling </span>site</h1>
+                        <p class="text-2xl mt-10 max-md:text-xl text-white">Purchase The axelit & Craft Your Site Super
+                            Faster And
+                            powerful. Discover the axelit Admin Theme. If you enjoy our template, please take a moment
+                            to rate us</p>
+                        <div class="inline-flex mt-10 mb-10">
+                            <a href="#"
+                                class=" bg-purple-500 grid place-content-center text-white text-xl rounded-4xl h-10 w-32 m-3 max-md:m-2">Buy
+                                now!</a>
+                            <a href="#"
+                                class=" bg-pink-500 grid place-content-center text-white text-xl rounded-4xl h-10 w-32 m-3 max-md:m-2">Need
+                                now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
